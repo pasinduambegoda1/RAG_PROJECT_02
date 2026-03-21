@@ -89,6 +89,7 @@ jobs:
           memory: 2
           port: 8000
           wait-for-service-stability-seconds: 300
+          copy-env-vars: true
           runtime-environment-variables: |
             OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
             QDRANT_URL=${{ secrets.QDRANT_URL }}
