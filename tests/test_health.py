@@ -17,13 +17,10 @@ class TestHealthEndpoints:
     def test_root_endpoint(self, client):
         """Test root endpoint (Frontend UI)."""
         response = client.get("/")
-
-        # 1. Verify the request was successful
         assert response.status_code == 200
-        data = response.json()
-        assert "message" in data
-        assert "version" in data
-        assert "docs" in data
+        assert "text/html" in response.headers["content-type"]
+        assert "<html" in response.text.lower()
+        assert "RAG Q&A System" in response.text
 
     def test_readiness_check(self, client, mock_vector_store):
         """Test readiness check endpoint."""
