@@ -39,11 +39,9 @@ python-dotenv>=1.0.0
 pydantic>=2.5.0
 pydantic-settings>=2.1.0
 """,
-
     ".env.example": """# Environment Variables
 # Add your configuration here
 """,
-
     ".gitignore": """# Python
 __pycache__/
 *.py[cod]
@@ -72,10 +70,8 @@ venv/
 # OS
 .DS_Store
 """,
-
     # App files
     "app/__init__.py": """""",
-
     "app/main.py": """from fastapi import FastAPI
 
 app = FastAPI(title="FastAPI Application")
@@ -95,15 +91,10 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
 """,
-
     "app/api/__init__.py": """""",
-
     "app/api/routes/__init__.py": """""",
-
     "app/core/__init__.py": """""",
-
     "app/utils/__init__.py": """""",
-
     # Tests
     "tests/__init__.py": """""",
 }
