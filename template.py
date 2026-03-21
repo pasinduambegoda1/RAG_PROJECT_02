@@ -982,10 +982,7 @@ def create_project_structure():
     base_path = Path.cwd()
 
     # Check if we should create in current directory or new directory
-    if base_path.name == PROJECT_NAME:
-        project_path = base_path
-    else:
-        project_path = base_path / PROJECT_NAME
+    project_path = base_path if base_path.name == PROJECT_NAME else base_path / PROJECT_NAME
 
     print(f"Creating project structure in: {project_path}")
     print("=" * 50)
