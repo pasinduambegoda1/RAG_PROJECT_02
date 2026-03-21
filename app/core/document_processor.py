@@ -134,7 +134,6 @@ class DocumentProcessor:
         return loaders[extension](file_path)
 
     def load_from_upload(
-        
         self,
         file: BinaryIO,
         filename: str,

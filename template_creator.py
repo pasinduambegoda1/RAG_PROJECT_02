@@ -15,7 +15,6 @@ This will create the following structure:
     └── tests/
 """
 
-import os
 from pathlib import Path
 
 # Project root directory name

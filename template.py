@@ -18,7 +18,6 @@ This will create the following structure:
     └── .github/workflows/
 """
 
-import os
 from pathlib import Path
 
 # Project root directory name
