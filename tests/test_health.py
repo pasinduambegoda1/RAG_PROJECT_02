@@ -1,6 +1,5 @@
 """test_health.py - Tests for health check endpoints."""
 
-
 class TestHealthEndpoints:
     """Test health check endpoints."""
 
@@ -15,9 +14,10 @@ class TestHealthEndpoints:
         assert "version" in data
 
     def test_root_endpoint(self, client):
-        """Test root endpoint."""
+        """Test root endpoint (Frontend UI)."""
         response = client.get("/")
 
+        # 1. Verify the request was successful
         assert response.status_code == 200
         data = response.json()
         assert "message" in data
