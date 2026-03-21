@@ -29,6 +29,7 @@ router = APIRouter(prefix="/query", tags=["Query"])
     summary="Ask a question",
     description="Submit a question and get an AI-generated answer based on the ingested documents.",
 )
+
 async def query(request: QueryRequest) -> QueryResponse:
     """Process a RAG query."""
     logger.info(

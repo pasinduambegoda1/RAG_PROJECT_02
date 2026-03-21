@@ -1,4 +1,4 @@
-"""Tests for query endpoints."""
+"""test_query.py - Tests for query endpoints."""
 
 
 class TestQueryEndpoints:

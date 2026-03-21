@@ -1,4 +1,4 @@
-"""Tests for RAGAS evaluator module."""
+"""test_ragas_evaluation.py - Tests for RAGAS evaluator module."""
 
 from unittest.mock import MagicMock, patch
 

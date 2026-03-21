@@ -1,4 +1,4 @@
-"""Pytest configuration and fixtures."""
+"""conftest.py - Pytest configuration and fixtures."""
 
 import os
 from unittest.mock import MagicMock, patch

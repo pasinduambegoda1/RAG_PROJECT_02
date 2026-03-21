@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -20,6 +21,9 @@ from app.config import get_settings
 from app.utils.logger import get_logger, setup_logging
 
 settings = get_settings()
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+print(f"Project root: {PROJECT_ROOT}")
+STATIC_DIR = PROJECT_ROOT / "static"
 
 
 @asynccontextmanager
@@ -72,7 +76,7 @@ app.add_middleware(
 )
 
 # Mount static files
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 # Include routers
 app.include_router(health.router)

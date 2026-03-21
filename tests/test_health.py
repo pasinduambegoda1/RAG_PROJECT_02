@@ -1,4 +1,4 @@
-"""Tests for health check endpoints."""
+"""test_health.py - Tests for health check endpoints."""
 
 
 class TestHealthEndpoints:
