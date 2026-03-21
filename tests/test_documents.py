@@ -1,6 +1,5 @@
 "test_documents.py - Tests for document processing and endpoints."
 
-
 import io
 from unittest.mock import MagicMock, patch
 
