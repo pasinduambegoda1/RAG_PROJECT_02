@@ -17,7 +17,6 @@ class Settings(BaseSettings):
 
     # OpenAI Configuration
     OPENAI_API_KEY: str
-    
     # Qdrant Cloud Configuration
     QDRANT_URL: str
     QDRANT_API_KEY: str
