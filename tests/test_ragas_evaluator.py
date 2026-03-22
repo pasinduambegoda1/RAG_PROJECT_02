@@ -33,7 +33,7 @@ class TestRAGASEvaluator:
         settings.llm_model = "gpt-4o-mini"
         settings.llm_temperature = 0.0
         settings.embedding_model = "text-embedding-3-small"
-        settings.openai_api_key = "test-key"
+        settings.OPENAI_API_KEY = "test-key"
         settings.ragas_llm_model = "gpt-4o"  # Different model for evaluation
         settings.ragas_llm_temperature = 0.1
         settings.ragas_embedding_model = "text-embedding-3-large"
@@ -64,7 +64,7 @@ class TestRAGASEvaluator:
         settings.llm_model = "gpt-4o-mini"
         settings.llm_temperature = 0.0
         settings.embedding_model = "text-embedding-3-small"
-        settings.openai_api_key = "test-key"
+        settings.OPENAI_API_KEY = "test-key"
         settings.ragas_llm_model = None  # Will fall back to llm_model
         settings.ragas_llm_temperature = None  # Will fall back to llm_temperature
         settings.ragas_embedding_model = None  # Will fall back to embedding_model

@@ -28,11 +28,11 @@ def get_qdrant_client() -> QdrantClient:
     Returns:
         Configured QdrantClient instance
     """
-    logger.info(f"Connecting to Qdrant at: {settings.qdrant_url}")
+    logger.info(f"Connecting to Qdrant at: {settings.QDRANT_URL}")
 
     client = QdrantClient(
-        url=settings.qdrant_url,
-        api_key=settings.qdrant_api_key,
+        url=settings.QDRANT_URL,
+        api_key=settings.QDRANT_API_KEY,
     )
 
     logger.info("Qdrant client connected successfully")

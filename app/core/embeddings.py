@@ -22,7 +22,7 @@ def get_embeddings() -> OpenAIEmbeddings:
 
     embeddings = OpenAIEmbeddings(
         model=settings.embedding_model,
-        openai_api_key=settings.openai_api_key,
+        openai_api_key=settings.OPENAI_API_KEY,
     )
 
     logger.info("Embeddings model initialized successfully")

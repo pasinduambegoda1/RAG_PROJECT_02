@@ -38,13 +38,13 @@ class RAGASEvaluator:
         self.llm = ChatOpenAI(
             model=eval_llm_model,
             temperature=eval_llm_temperature,
-            openai_api_key=self.settings.openai_api_key,
+            openai_api_key=self.settings.OPENAI_API_KEY,
         )
 
         # Initialize embeddings for evaluation
         self.embeddings = OpenAIEmbeddings(
             model=eval_embedding_model,
-            openai_api_key=self.settings.openai_api_key,
+            openai_api_key=self.settings.OPENAI_API_KEY,
         )
 
         # Initialize metrics (reference-free only)

@@ -586,7 +586,7 @@ def get_embeddings() -> OpenAIEmbeddings:
     """Get cached OpenAI embeddings instance."""
     return OpenAIEmbeddings(
         model=settings.embedding_model,
-        openai_api_key=settings.openai_api_key,
+        openai_api_key=settings.OPENAI_API_KEY,
     )
 ''',
     "app/core/vector_store.py": '''"""Vector store module for Qdrant operations."""
@@ -612,7 +612,7 @@ EMBEDDING_DIMENSION = 1536
 @lru_cache
 def get_qdrant_client() -> QdrantClient:
     """Get cached Qdrant client instance."""
-    return QdrantClient(url=settings.qdrant_url, api_key=settings.qdrant_api_key)
+    return QdrantClient(url=settings.QDRANT_URL, api_key=settings.QDRANT_API_KEY)
 
 
 class VectorStoreService:
@@ -698,7 +698,7 @@ class RAGChain:
         self.llm = ChatOpenAI(
             model=settings.llm_model,
             temperature=settings.llm_temperature,
-            openai_api_key=settings.openai_api_key,
+            openai_api_key=settings.OPENAI_API_KEY,
         )
         self.prompt = ChatPromptTemplate.from_template(RAG_PROMPT)
         self.chain = (

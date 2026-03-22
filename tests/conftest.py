@@ -18,9 +18,9 @@ def mock_settings():
     """Mock settings for testing."""
     with patch("app.config.get_settings") as mock:
         settings = MagicMock()
-        settings.openai_api_key = "test-key"
-        settings.qdrant_url = "http://localhost:6333"
-        settings.qdrant_api_key = "test-key"
+        settings.OPENAI_API_KEY = "test-key"
+        settings.QDRANT_URL = "http://localhost:6333"
+        settings.QDRANT_API_KEY = "test-key"
         settings.collection_name = "test_collection"
         settings.chunk_size = 500
         settings.chunk_overlap = 100

@@ -60,7 +60,7 @@ class RAGChain:
         self.llm = ChatOpenAI(
             model=settings.llm_model,
             temperature=settings.llm_temperature,
-            openai_api_key=settings.openai_api_key,
+            openai_api_key=settings.OPENAI_API_KEY,
         )
 
         # Create prompt template
