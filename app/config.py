@@ -16,11 +16,11 @@ class Settings(BaseSettings):
     )
 
     # OpenAI Configuration
-    openai_api_key: str
-
+    OPENAI_API_KEY: str
+    
     # Qdrant Cloud Configuration
-    qdrant_url: str
-    qdrant_api_key: str
+    QDRANT_URL: str
+    QDRANT_API_KEY: str
 
     # Collection Settings
     collection_name: str = "rag_documents"
