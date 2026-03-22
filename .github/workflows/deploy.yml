@@ -111,7 +111,7 @@ jobs:
           cpu: 1
           memory: 2
           port: 8000
-          wait-for-service-stability-seconds: 300
+          wait-for-service-stability-seconds: 600
           # FIX 1: Change to copy-env-vars
           copy-env-vars: true
         # FIX 2: Place variables in the 'env' section of the step
