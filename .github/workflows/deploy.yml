@@ -115,15 +115,15 @@ jobs:
           # FIX 1: Change to copy-env-vars
           copy-env-vars: true
         # FIX 2: Place variables in the 'env' section of the step
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          QDRANT_URL: ${{ secrets.QDRANT_URL }}
-          QDRANT_API_KEY: ${{ secrets.QDRANT_API_KEY }}
-          LOG_LEVEL: INFO
-          LANGSMITH_TRACING: true
-          LANGSMITH_API_KEY: ${{ secrets.LANGSMITH_API_KEY }}
-          LANGSMITH_PROJECT: rag-qa-production
-          LANGSMITH_ENDPOINT: https://eu.api.smith.langchain.com
+          runtime-environment-variables: |
+            OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+            QDRANT_URL=${{ secrets.QDRANT_URL }}
+            QDRANT_API_KEY=${{ secrets.QDRANT_API_KEY }}
+            LOG_LEVEL=INFO
+            LANGSMITH_TRACING=true
+            LANGSMITH_API_KEY=${{ secrets.LANGSMITH_API_KEY }}
+            LANGSMITH_PROJECT=rag-qa-production
+            LANGSMITH_ENDPOINT: https://eu.api.smith.langchain.com
 
       - name: Output App Runner URL
         run: |
